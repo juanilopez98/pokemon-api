@@ -117,7 +117,7 @@ router.delete('/entrenador/:id', validateID, async (req, res) => {
 });
 
 // obtener un pokemon random
-router.get('/pokemons/random', async (req, res) => {
+router.get('/pokemon/random', async (req, res) => {
   try {
     const randomPokemonId = Math.floor(Math.random() * 807) + 1;
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${randomPokemonId}`);

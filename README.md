@@ -29,7 +29,8 @@ http://localhost:4000
 
 | Ruta         | Verbo   | Descripción                                            |
 | ------------ | ------- | ---------------------------------------------          |
-| /api/etrenador     | GET     | Obtiene todos los entrenadores                   |
+| /     | GET     | Interfaz de usuario                   |
+| /api/entrenador     | GET     | Obtiene todos los entrenadores                   |
 | /api/entrenador/:id | GET     | Obtiene un Pokemon por su ID                    |
 | /api/entrenador/     | POST    | Crea un nuevo Pokemon                          |
 | /api/entrenador/:id | PUT     | Actualiza un Pokemon existente por su ID        |
