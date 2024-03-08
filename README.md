@@ -27,11 +27,11 @@ http://localhost:4000
 
 ## Rutas de la API
 
-| Ruta         | Verbo   | Descripción                                       |
-| ------------ | ------- | ---------------------------------------------     |
-| /api/etrenador     | GET     | Obtiene todos los entrenadores                  |
+| Ruta         | Verbo   | Descripción                                            |
+| ------------ | ------- | ---------------------------------------------          |
+| /api/etrenador     | GET     | Obtiene todos los entrenadores                   |
 | /api/entrenador/:id | GET     | Obtiene un Pokemon por su ID                    |
-| /api/entrenador/     | POST    | Crea un nuevo Pokemon                           |
+| /api/entrenador/     | POST    | Crea un nuevo Pokemon                          |
 | /api/entrenador/:id | PUT     | Actualiza un Pokemon existente por su ID        |
 | /api/entrenador/:id | DELETE  | Elimina un Pokemon existente por su ID          |
-| /api/pokemon/random| GET     | Obtiene un Pokemon al azar desde una api externa|
+| /api/pokemon/random| GET     | Obtiene un Pokemon al azar desde una api externa |

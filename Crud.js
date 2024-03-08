@@ -2,6 +2,7 @@ const express = require('express');
 const { validationResult, check } = require('express-validator');
 const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
+const { ObjectId } = require('mongodb');
 const axios = require('axios');
 const url = 'mongodb://localhost:27017';
 const dbName = 'pokemon';
@@ -93,7 +94,8 @@ router.put('/entrenador/:id', [validateID], async (req, res) => {
   try {
     const db = await connectDB();
     const collection = db.collection('entrenador');
-    await collection.updateOne({ _id: id }, { $set: req.body });
+    const objectId = new ObjectId(id);
+    await collection.updateOne({ _id: objectId }, { $set: req.body });
     res.send('El entrenador ha sido actualizado exitosamente');
   } catch (error) {
     handleError(res, error, 'Error al actualizar el entrenador');
@@ -106,7 +108,8 @@ router.delete('/entrenador/:id', validateID, async (req, res) => {
   try {
     const db = await connectDB();
     const collection = db.collection('entrenador');
-    await collection.deleteOne({ _id: id });
+    const objectId = new ObjectId(id);
+    await collection.deleteOne({ _id: objectId });
     res.send('El entrenador ha sido eliminado');
   } catch (error) {
     handleError(res, error, 'Error al eliminar el entrenador');
